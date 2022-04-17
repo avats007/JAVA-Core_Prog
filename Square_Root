@@ -1,0 +1,15 @@
+import java.io.*;
+import java.util.Scanner;
+import java.util.Scanner;
+import java.lang.Math;
+class Square_root{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        double x = sc.nextDouble();
+        double y;
+        y= Math.sqrt(x);
+        System.out.println("Square Root of the number = " + y);
+
+    }
+}
