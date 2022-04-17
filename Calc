@@ -1,0 +1,28 @@
+
+import java.io.*;
+import java.util.Scanner;
+class Calc{
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter two numbers");
+        float n1 = sc.nextFloat();
+        float n2 = sc.nextFloat();
+
+        float sum = n1+n2;
+        float diff=0;
+        if(n1>n2){
+            diff = n1-n2;
+        }
+        else if(n1<n2){
+            diff = n2-n1;
+        }
+
+        float p = (n1*n2);
+
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + diff);
+        System.out.println("Product: " + p);
+
+    }
+}
