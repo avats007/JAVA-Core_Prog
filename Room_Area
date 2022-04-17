@@ -1,0 +1,27 @@
+
+import java.io.*;
+import java.util.Scanner;
+class Room{
+    float length;
+    float breadth;
+
+    void get_data(float a,float b){
+        length = a;
+        breadth = b;
+    }
+}
+
+class Room_Area{
+
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        float area = 0;
+        // Creating Class Room object
+        Room r =  new Room();
+        float a = sc.nextFloat();
+        float b = sc.nextFloat();
+        r.get_data(a,b);
+        area = r.length * r.breadth;
+        System.out.println("Area of room = " + area);
+    }
+}
