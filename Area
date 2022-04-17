@@ -1,0 +1,64 @@
+
+import java.io.*;
+import java.util.Scanner;
+class Circle{
+    float radius;
+    void getdata(float r){
+        radius = r;
+    }
+}
+class Square{
+    float side;
+    void getdata(float sd){
+        side = sd;
+    }
+}
+class Triangle{
+    float base,height;
+    void getdata(float b,float h){
+        base = b;
+        height = h;
+    }
+}
+
+class Rectangle{
+    float length,breadth;
+    void getdata(float l,float br){
+        length = l;
+        breadth = br;
+    }
+}
+class Area{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        Circle c = new Circle();
+        Square s = new Square();
+        Triangle t = new Triangle();
+        Rectangle rec = new Rectangle();
+        System.out.println("Enter the radius of the Circle");
+        float r = sc.nextFloat();
+        c.getdata(r);
+        double a_o_c = 3.14 * (c.radius)*(c.radius);
+        System.out.println("Enter the side of the Square");
+        float sd = sc.nextFloat();
+        s.getdata(sd);
+        double a_o_s = (s.side)*(s.side);
+
+        System.out.println("Enter the base and height of the triangle");
+        float b = sc.nextFloat();
+        float h = sc.nextFloat();
+        t.getdata(b,h);
+        double a_o_t = (0.5) *(t.base)*(t.height);
+
+        System.out.println("Enter the length and breadth of the rectangle");
+        float l = sc.nextFloat();
+        float br = sc.nextFloat();
+        rec.getdata(l,br);
+        double a_o_r = (rec.length)*(rec.breadth);
+
+        System.out.println("Area of Circle: " + a_o_c);
+        System.out.println("Area of Square: " + a_o_s);
+        System.out.println("Area of Triangle: " + a_o_t);
+        System.out.println("Area of Rectangle: " + a_o_r);
+    }
+}
