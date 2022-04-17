@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.Scanner;
+class Basic_Pay{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the basic pay");
+        double BP = sc.nextDouble();
+        double da = 0.25*BP;
+        double hra = 0.15*BP;
+        double pf = 0.0833*BP;
+
+        double net_pay = BP+da+hra+pf;
+
+        System.out.println("Net_Pay: " + net_pay);
+    }
+}
