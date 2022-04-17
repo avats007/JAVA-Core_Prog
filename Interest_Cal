@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.Scanner;
+class Interest_Cal{
+
+    public static void main(String[] args){
+
+        System.out.println("Enter the principle amount, rate of interest and time period");
+        Scanner sc = new Scanner(System.in);
+        double p = sc.nextDouble();
+        float r = sc.nextFloat();
+        int t = sc.nextInt();
+
+        double SI = (p*r*t)/100;
+        System.out.println("Our Interest is : " + SI);
+    }
+}
