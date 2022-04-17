@@ -1,0 +1,23 @@
+
+import java.io.*;
+import java.util.Scanner;
+class Greatest{
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter three numbers");
+        float n1 = sc.nextFloat();
+        float n2 = sc.nextFloat();
+        float n3 = sc.nextFloat();
+
+        float large = n1;
+        if(n2>n3 && n2>n1)
+            large = n2;
+
+        else if(n3>n1 && n3>n2)
+            large = n3;
+
+
+        System.out.println("Greatest number among the given three inputs is: " + large);
+    }
+}
