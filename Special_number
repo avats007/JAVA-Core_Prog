@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.Scanner;
+class Special_number{
+    static int fact(int r){
+        int ft = 1;
+        for(int i=r;i>=2;i--)
+            ft = ft*i;
+
+        return ft;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int n = sc.nextInt();
+        int t = n;
+        int r,f=0;
+        while(t!=0){
+            r = t%10;
+            f =f + fact(r);
+            t = t/10;
+        }
+
+        if(f==n)
+            System.out.println("The given number is a special number");
+
+        else
+            System.out.println("The given number is not a special number");
+        }
+    }
