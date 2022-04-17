@@ -1,0 +1,35 @@
+
+import java.io.*;
+import java.util.Scanner;
+class Temperature{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double cel, fah;
+        char ch;
+        do {
+            System.out.println("Enter a user choice");
+            ch = sc.next().charAt(0);
+            switch (ch) {
+                case 'c':
+                    System.out.println("Enter temperature in celsius");
+                    cel = sc.nextDouble();
+                    fah = (cel * 1.8) + 32;
+                    System.out.println("Temperature in Fahrenheit is: " + fah);
+                    break;
+
+                case 'f':
+                    System.out.println("Enter temperature in Fahrenheit");
+                    fah = sc.nextDouble();
+                    cel = ((fah - 32) * 5) / 9;
+                    System.out.println("Temperature in Celsius is: " + cel);
+                    break;
+
+                default:
+                    System.out.println("Wrong Input");
+                    break;
+
+            }
+        } while (ch == 'c' || ch == 'f');
+    }
+
+}
